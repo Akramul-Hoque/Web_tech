@@ -11,7 +11,7 @@
       }
       else
        {
-        echo  $g_error = "Your gander is ".$_POST["gender"];
+        echo "selected";
        }
 
     }
