@@ -1,0 +1,28 @@
+<?php
+	session_start();
+	
+	if($_SESSION['status'] == "Ok"){ 
+
+?>
+	
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+</head>
+<body>
+
+	<h1>Welcome BOB!</h1> <a href="Profile.php"> Profile</a><br>
+	<a href="Profile.php"> Change password</a><br>
+	
+	<a href="users.php"> view users</a><br>
+	<a href="Logout.php"> Logout</a><br>
+</body>
+</html>
+
+
+<?php
+	}else{
+		header('location: login.html');
+	}
+?>
