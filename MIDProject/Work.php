@@ -6,7 +6,7 @@
 <body>
 
 	<div style =" border:  solid #000000;width: 500px">
-		<h1 style="text-align:center">Wrelcome Akramul Hoque Nahid</h1>
+		<h1 style="text-align:center">Available Features </h1>
 		<table width="100%" cellpadding="0" cellspacing="10">
 
 			
