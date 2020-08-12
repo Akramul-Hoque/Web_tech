@@ -11,7 +11,7 @@
 
 			
 			<tr><td colspan="4" align="center"> 
-			<a href="Services.php"> Services</a><br>
+			<a href="Services.html"> Services</a><br>
 			<a href="AddUsers.php"> AddUsers</a><br>
 			<a href="Payment.php"> Payemnt</a><br>
 			<a href="HelpCenter.html">HelpCenter</a><br>
