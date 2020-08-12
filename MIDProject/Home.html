@@ -1,7 +1,8 @@
 <?php
 	session_start();
 	
-	if($_SESSION['status'] == "Ok"){ 
+	if($_COOKIE['status'] == "OK"){ 
+
 
 ?>
 	
@@ -18,7 +19,7 @@
 			<tr><td colspan="4" align="center"> 
 			<a href="profile.php"> Profile</a><br>
 			<a href="Work.php"> Work</a><br>
-			<a href="About.php"> About</a><br>
+			<a href="About.html"> About</a><br>
 			<a href="Home.html"> Home</a><br>
 	    </table>
 	
@@ -30,4 +31,5 @@
 	}else{
 		header('location: login.html');
 	}
+
 ?>
