@@ -12,6 +12,7 @@
 		$result = mysqli_query($conn, $sql);
 		$row = mysqli_fetch_assoc($result);
 		return $row;
+		return $row;
 	}
 
 	function getAllUser(){
@@ -21,7 +22,7 @@
 			echo "DB connection error";
 		}
 
-		$sql = "select * from users";
+		$sql = "SELECT * FROM users";
 		$result = mysqli_query($conn, $sql);
 		$users = [];
 
@@ -40,7 +41,7 @@
 			echo "DB connection error";
 		}
 
-		$sql = "select * from users where username='{$user['username']}' and password='{$user['password']}'";
+		$sql = "SELECT * FROM users where username='{$user['username']}' and password='{$user['password']}'";
 		$result = mysqli_query($conn, $sql);
 		$user = mysqli_fetch_assoc($result);
 
@@ -68,13 +69,13 @@
 	}
 
 
-	function update($user){
+	function delete($user){
 		$conn = dbConnection();
 		if(!$conn){
 			echo "DB connection error";
 		}
 
-		$sql = "update users set username='{$user['username']}', password='{$user['password']}', email='{$user['email']}' where u_id={$user['u_id']}";
+		$sql = "DELETE FROM users WHERE u_id = '".$user."'";
 
 		if(mysqli_query($conn, $sql)){
 			return true;
@@ -84,21 +85,5 @@
 	}
 
 
-	function delete($user)
-	{
-		$conn = dbConnection();
-		if(!$conn){
-			echo "DB connection error";
-		}
-
-		$sql = "DELETE * from users WHERE u_id={$user['u_id']}"; 
-        
-        
-       if(mysqli_query($conn, $sql)){
-			return true;
-		}else{
-			return false;
-		}
-	}
 
 ?>

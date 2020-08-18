@@ -1,6 +1,5 @@
 <?php
-
-require_once('../php/session_header.php');
+	require_once('../php/session_header.php');
 	require_once('../service/userService.php');
 
 	if (isset($_GET['u_id'])) {
@@ -10,6 +9,7 @@ require_once('../php/session_header.php');
 	}
 
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,6 +23,7 @@ require_once('../php/session_header.php');
 			<table>
 				<h1>confirm delete</h1>
 						<input type="submit" name="delete" value="delete"> 
+
 						<a href="all_users.php">Back</a>
 					</td>
 				</tr>
