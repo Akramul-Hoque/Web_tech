@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Ajax Example</title>
+	<title>Registration</title>
 </head>
 <body>
 <fieldset>
 		<table>
+			<tr>
+				<td>
+					Author name
+				</td>
+				<td>
+					<input type="text " name="authorname" id="authorname">
+				</td>
+			</tr>
 			<tr>
 				<td>
 					Username
@@ -16,12 +24,13 @@
 			</tr>
 			<tr>
 				<td>
-					Email
+					Contact Number
 				</td>
 				<td>
-					<input type="text" name="email" id="email" onkeyup="f2()">
+					<input type="text " name="contactnumber" id="contactnumber">
 				</td>
 			</tr>
+			
 			<tr>
 				<td>
 					Password
@@ -42,27 +51,7 @@
 		</table>
 </fieldset>
 		<script>
-			function f2(){
-
-				var email = document.getElementById('email').value;
-				var xhttp = new XMLHttpRequest();
-				xhttp.open('POST', 'valid.php', true);
-				xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-				xhttp.send('email='+email);
-
-				xhttp.onreadystatechange = function (){
-					if(this.readyState == 4 && this.status == 200){
-
-						if(this.responseText != ""){
-							document.getElementById('searchdata').innerHTML = this.responseText;
-						}else{
-							document.getElementById('searchdata').innerHTML = "";
-						}
-						
-					}	
-				}
-			}
-
+			
 			function f1()
 			{
 			   var username = document.getElementById('username').value;
