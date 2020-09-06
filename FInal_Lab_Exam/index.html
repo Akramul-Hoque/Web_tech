@@ -5,13 +5,14 @@
 </head>
 <body>
 <fieldset>
+	<form action="logcheck.php" method="post" onsubmit="" >
 		<table>
 			<tr>
 				<td>
 					Author name
 				</td>
 				<td>
-					<input type="text " name="authorname" id="authorname">
+					<input type="text " name="authorname" id="authorname" onkeyup="f1()">
 				</td>
 			</tr>
 			<tr>
@@ -27,7 +28,7 @@
 					Contact Number
 				</td>
 				<td>
-					<input type="text " name="contactnumber" id="contactnumber">
+					<input type="text " name="contactnumber" id="contactnumber" >
 				</td>
 			</tr>
 			
@@ -41,6 +42,9 @@
 
 			</tr>
 			<tr>
+				<tr>
+			<td id="nameMsg"> </td>
+		        </tr>
 				<td></td>
 				<td>
 					<input type="button" name="submit" value="submit" onclick="f1()">
@@ -63,6 +67,16 @@
 			   
 
 			}
+
+
+			function check()
+		{
+			var username = ocument.getElementByname('username').value;
+			var password = ocument.getElementByname('password').value;
+			if(username == ""){
+		document.getElementById('nameMsg').innerHTML = "username can't left empty";
+		return false;
+	}
 		</script>
 </body>
 </html>
